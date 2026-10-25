@@ -1,0 +1,6 @@
+@use '@/shared/config/scss' as *;
+
+:root {
+    --color-sidestage-background: #{$color-black-lighter};
+    --color-sidestage-border: #{$color-gray-darker};
+}

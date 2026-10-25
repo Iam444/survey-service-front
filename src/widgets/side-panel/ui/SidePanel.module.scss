@@ -1,0 +1,37 @@
+.SidePanel {
+    z-index: $level-2;
+    flex: 0 1 250px;
+    min-width: 48px;
+    height: 100%;
+    padding-block: 18px;
+    padding-inline: 8px;
+    background-color: $color-black-light;
+    box-shadow: 1px 0 0 0 $color-gray-darker;
+}
+
+.SidePanelItem {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    align-items: center;
+    min-width: 1px;
+    height: 32px;
+    padding-inline: 8px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+
+    &:hover:not(.active) {
+        background-color: $color-white-transparent-6;
+    }
+
+    &.active {
+        background-color: $color-white-transparent-11;
+    }
+}
+
+.SidePanelSeparator {
+    height: 0;
+    margin: 8px;
+    border-bottom: 1px solid $color-gray-dark;
+}

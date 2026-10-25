@@ -1,0 +1,58 @@
+.SearchBar {
+    padding: 8px 24px;
+
+    & .SearchBarInput {
+        max-width: unset;
+        border-radius: 16px;
+    }
+
+    & .SearchBarNameFilterText,
+    & .SearchBarListItemName {
+        line-height: 28px;
+    }
+}
+
+.SearchBarInput {
+    padding-left: 44px;
+}
+
+.SearchBarIcon,
+.SearchBarLoadingIndicator {
+    margin-right: 4px;
+}
+
+.SearchBarIcon {
+    margin-left: 18px;
+}
+
+.SearchBarLoadingIndicator {
+    margin-left: 14px;
+}
+
+.SearchBarList {
+    min-width: 300px;
+    max-width: 600px;
+    max-height: 200px;
+}
+
+.SearchBarNameFilter,
+.SearchBarListItem {
+    gap: 12px;
+}
+
+.SearchBarNameFilter,
+.SearchBarListItemLink {
+    padding-block: 12px;
+}
+
+.SearchBarListItem {
+    padding: 0;
+}
+
+.SearchBarListItemLink {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    padding-inline: 16px;
+    text-decoration: none;
+}

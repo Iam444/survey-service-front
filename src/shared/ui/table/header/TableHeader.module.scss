@@ -1,0 +1,12 @@
+.TableHeader {
+    position: sticky;
+    top: 0;
+    z-index: $level-2;
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    min-width: max-content;
+    height: 38px;
+    background-color: $color-black;
+    border-bottom: 1px solid $color-gray-darker;
+}

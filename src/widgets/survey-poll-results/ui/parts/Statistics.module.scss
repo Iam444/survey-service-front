@@ -1,0 +1,74 @@
+.Statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    width: 540px;
+    height: fit-content;
+    min-height: 300px;
+    padding: 24px;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: $color-black-lighter;
+    border: 1px solid $color-gray-darker;
+    border-radius: 12px;
+
+    & .StatisticsOptionVotesPercentage,
+    & .StatisticsOptionName,
+    & .StatisticsOptionVotesQuantity {
+        line-height: 28px;
+    }
+}
+
+.StatisticsOptionStatisticsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.StatisticsOptionStatistics {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 4px 12px;
+    align-items: center;
+    padding-block: 12px;
+
+    & > :nth-child(odd) {
+        justify-self: end;
+    }
+
+    margin-left: -6px;
+}
+
+.StatisticsLeadingOptionIcon {
+    margin-right: 8px;
+    fill: $color-yellow;
+}
+
+.StatisticsViewerSelectionMark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: $color-primary;
+    border-radius: 4px;
+    fill: $color-white;
+
+    &.rounded {
+        border-radius: 100px;
+    }
+}
+
+.StatisticsVotesPercentageScale {
+    grid-column: 2 / 2;
+}
+
+.StatisticsOptionVotesQuantity {
+    margin-left: auto;
+    word-break: unset;
+}
+
+.StatisticsOptionName {
+    margin-right: 12px;
+}

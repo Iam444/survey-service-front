@@ -1,0 +1,140 @@
+.Button {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        'Helvetica Neue',
+        Helvetica,
+        Arial,
+        sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: 0.2s;
+    transition-property: background-color, border, color, fill;
+
+    &.variant-solid {
+        color: $color-white;
+        background: $color-primary;
+        border: 1px solid transparent;
+        fill: $color-white;
+
+        &:focus-visible:not(:disabled),
+        &:hover:not(:disabled) {
+            background: $color-primary-600;
+        }
+    }
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px $color-white;
+    }
+
+    &.variant-themed {
+        color: $color-white;
+        background: $color-black;
+        border: 1px solid $color-gray-dark;
+        fill: $color-gray-light;
+
+        &:focus-visible,
+        &:hover:not(:disabled) {
+            border-color: $color-gray-light;
+            fill: $color-white;
+        }
+    }
+
+    &.variant-transparent {
+        font-weight: 500;
+        color: $color-gray-light;
+        background: none;
+        border: none;
+        fill: $color-gray-light;
+
+        &:focus-visible:not(:disabled),
+        &:hover:not(:disabled) {
+            color: $color-white;
+            background: $color-white-transparent-6;
+            fill: $color-white;
+        }
+    }
+
+    &.variant-bald {
+        font-weight: 600;
+        color: $color-gray-light;
+        background: none;
+        border: none;
+        fill: $color-gray-light;
+
+        &:focus-visible:not(:disabled),
+        &:hover:not(:disabled) {
+            color: $color-primary-400;
+            fill: $color-primary-400;
+        }
+    }
+
+    &.variant-iconOnly {
+        padding: 0;
+        background: none;
+        border: none;
+        fill: $color-gray-light;
+
+        &:focus-visible:not(:disabled),
+        &:hover:not(:disabled) {
+            background: $color-white-transparent-6;
+            fill: $color-white;
+        }
+
+        &.size-extraSmall {
+            width: 20px;
+            height: 20px;
+        }
+
+        &.size-small {
+            width: 28px;
+            height: 28px;
+        }
+
+        &.size-medium {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    &.size-small {
+        gap: 6px;
+        height: 28px;
+        padding: 0 8px;
+        font-size: 12px;
+        line-height: 28px;
+        border-radius: 6px;
+    }
+
+    &.size-medium {
+        gap: 8px;
+        height: 36px;
+        padding: 0 12px;
+        font-size: 14px;
+        line-height: 36px;
+        border-radius: 6px;
+    }
+
+    &.rounded {
+        border-radius: 50px;
+    }
+
+    &:disabled {
+        color: $color-gray;
+        cursor: unset;
+        background-color: transparent;
+        border: 1px solid $color-gray-darker;
+        fill: $color-gray;
+    }
+}

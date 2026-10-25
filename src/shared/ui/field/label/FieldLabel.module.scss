@@ -1,0 +1,12 @@
+.FieldLabel {
+    align-self: flex-start;
+    margin-bottom: 4px;
+
+    &.required {
+        &::after {
+            margin-left: 2px;
+            color: $color-danger;
+            content: '*';
+        }
+    }
+}

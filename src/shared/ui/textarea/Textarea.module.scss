@@ -1,0 +1,70 @@
+$textarea-line-height: 22px;
+$textarea-padding-block: 6px;
+$textarea-border-width: 1px;
+
+.TextareaWrapper {
+    display: inline-grid;
+    grid-template-rows: min-content;
+    text-rendering: optimizespeed;
+}
+
+.Textarea {
+    width: 100%;
+    height: 100%;
+    overflow: hidden auto;
+    resize: none;
+    scrollbar-width: none;
+    background-color: $color-black;
+
+    &:hover {
+        border-color: $color-gray;
+    }
+
+    &:focus-visible {
+        outline: none;
+        border-color: $color-gray-light;
+        box-shadow: 0 0 0 2px $color-white;
+    }
+
+    &.invalid {
+        border-color: $color-danger;
+
+        &:focus-visible {
+            box-shadow:
+                0 0 0 2px $color-black,
+                0 0 0 4px $color-white;
+        }
+    }
+}
+
+.TextareaMirrorText {
+    visibility: hidden;
+    max-height: calc((var(--max-rows, 4) * $textarea-line-height) + $textarea-padding-block * 2 + $textarea-border-width * 2);
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    pointer-events: none;
+    user-select: none;
+}
+
+.Textarea,
+.TextareaMirrorText {
+    grid-area: 1 / 1;
+    padding: $textarea-padding-block 12px;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        'Helvetica Neue',
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: $textarea-line-height;
+    border: $textarea-border-width solid $color-gray-dark;
+    border-radius: 6px;
+}

@@ -1,0 +1,19 @@
+.ComboboxItem {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 160px;
+    min-height: 36px;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+
+    &[data-highlighted] {
+        background-color: $color-black-light;
+        box-shadow: inset 4px 0 0 0 $color-white;
+    }
+
+    &[data-disabled] {
+        cursor: default;
+    }
+}

@@ -1,0 +1,26 @@
+@use '@/shared/config/scss' as *;
+
+:root {
+    color-scheme: dark;
+}
+
+:root {
+    --color-text: #{$color-white};
+    --color-text-disabled: #{$color-gray};
+    --color-text-weak: #{$color-gray-light};
+    --color-text-weak-hovered: #{$color-white};
+    --color-icon: #{$color-gray-light};
+    --color-icon-hovered: #{$color-white};
+    --color-icon-disabled: #{$color-gray};
+    --color-icon-strong: #{$color-white};
+    --color-border: #{$color-gray-darker};
+    --color-border-hovered: #{$color-gray};
+    --color-border-active: #{$color-gray-light};
+    --color-background: #{$color-black};
+    --color-background-hovered: #{$color-white-transparent-6};
+    --color-background-active: #{$color-white-transparent-11};
+    --color-background-medium: #{$color-black-light};
+    --color-background-strong: #{$color-black-lighter};
+    --color-underline-hovered: #{$color-gray-light};
+    --color-underline-active: #{$color-white};
+}

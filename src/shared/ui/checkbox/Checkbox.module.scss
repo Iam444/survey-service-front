@@ -1,0 +1,43 @@
+.Checkbox {
+    position: relative;
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid $color-gray-dark;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+    transition-property: border-color, background-color;
+
+    &:disabled:not(:checked) {
+        cursor: default;
+        background-color: $color-gray;
+        border-color: transparent;
+    }
+
+    &:checked {
+        background-color: $color-primary;
+        border-color: transparent;
+
+        &::after {
+            transform: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background-color: $color-white;
+        mask-image: url('./assets/check-mark.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 10px 10px;
+        transform: scale(0);
+        transition: transform 0.3s;
+    }
+}

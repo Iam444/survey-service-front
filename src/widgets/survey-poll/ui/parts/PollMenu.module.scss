@@ -1,0 +1,10 @@
+.PollMenuTrigger {
+    &[data-pressed] {
+        background: $color-white-transparent-6;
+        fill: $color-white;
+    }
+}
+
+.PollMenuLoadingIndicator {
+    margin: 16px auto;
+}

@@ -1,0 +1,85 @@
+$gaps: (2, 4, 6, 8, 10, 12, 16, 18, 24, 32, 36);
+
+.Group {
+    display: flex;
+    min-width: 1px;
+    min-height: 1px;
+
+    &.direction-row {
+        flex-direction: row;
+    }
+
+    &.direction-column {
+        flex-direction: column;
+    }
+
+    &.align-start {
+        align-items: start;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.align-end {
+        align-items: end;
+    }
+
+    &.justify-start {
+        justify-content: start;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.justify-end {
+        justify-content: end;
+    }
+
+    &.justify-between {
+        justify-content: space-between;
+    }
+
+    &.justify-around {
+        justify-content: space-around;
+    }
+
+    &.justify-evenly {
+        justify-content: space-evenly;
+    }
+
+    &.flex-none {
+        flex: none;
+    }
+
+    &.flex-auto {
+        flex: auto;
+    }
+
+    &.flex-0 {
+        flex: 0;
+    }
+
+    &.flex-1 {
+        flex: 1;
+    }
+
+    &.wrap-wrap {
+        flex-wrap: wrap;
+    }
+
+    &.wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &.wrap-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    @each $value in $gaps {
+        &.gap-#{$value} {
+            gap: #{$value}px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.TableRowCell {
+    $min-width: var(--cell-min-width, 80px);
+
+    position: relative;
+    display: flex;
+    flex: 1 1 $min-width;
+    align-items: center;
+    width: $min-width;
+    min-width: $min-width;
+    padding: 0 12px;
+
+    &.sticky {
+        position: sticky;
+        left: 0;
+        z-index: $level-1;
+        background-color: var(--background-color-hovered, $color-black);
+        border-right: 1px solid $color-gray-darker;
+    }
+}
+
+.TableRowCell:first-child {
+    padding-left: 24px;
+}

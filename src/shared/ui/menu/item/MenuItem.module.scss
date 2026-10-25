@@ -1,0 +1,18 @@
+.MenuItem {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 160px;
+    min-height: 36px;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+
+    &[data-highlighted] {
+        background-color: $color-white-transparent-11;
+    }
+
+    &[data-disabled] {
+        cursor: default;
+    }
+}

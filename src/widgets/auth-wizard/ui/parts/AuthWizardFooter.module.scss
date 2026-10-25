@@ -1,0 +1,20 @@
+.AuthWizardFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 360px;
+    margin: auto;
+}
+
+.AuthWizardFooterPrevButton {
+    align-self: center;
+
+    &.hidden {
+        visibility: hidden;
+    }
+}
+
+.AuthWizardFooterPrivacyBlock {
+    visibility: hidden;
+    height: 60px;
+}

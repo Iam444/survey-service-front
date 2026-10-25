@@ -1,0 +1,9 @@
+.AppMain {
+    position: relative;
+    z-index: $level-1;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 312px;
+    height: 100%;
+}

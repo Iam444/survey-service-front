@@ -1,0 +1,14 @@
+.UserPreviewCardTopSection {
+    padding: 16px;
+}
+
+.UserPreviewCardEmail {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.UserPreviewCardBottomSection {
+    padding: 16px;
+    background-color: $color-black-light;
+}

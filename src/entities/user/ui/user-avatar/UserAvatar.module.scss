@@ -1,0 +1,91 @@
+@use 'sass:map';
+
+$user-avatar-palette: (
+    'red': (
+        bg: $color-red-200,
+        fg: $color-red-600,
+    ),
+    'coral': (
+        bg: $color-coral-200,
+        fg: $color-coral-600,
+    ),
+    'orange': (
+        bg: $color-orange-200,
+        fg: $color-orange-600,
+    ),
+    'blue': (
+        bg: $color-blue-200,
+        fg: $color-blue-600,
+    ),
+    'violet': (
+        bg: $color-violet-200,
+        fg: $color-violet-600,
+    ),
+    'magenta': (
+        bg: $color-magenta-200,
+        fg: $color-magenta-600,
+    ),
+    'pink': (
+        bg: $color-pink-200,
+        fg: $color-pink-600,
+    ),
+);
+
+.UserAvatar {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: $color-gray-darker;
+    user-select: none;
+    background-color: $color-gray;
+    border-radius: 50%;
+    fill: $color-gray-darker;
+
+    &.size-extraSmall {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    &.size-small {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    &.size-medium {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+        line-height: 28px;
+    }
+
+    &.size-large {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        line-height: 36px;
+    }
+
+    &.size-extraLarge {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        line-height: 42px;
+    }
+
+    @each $color-name, $color-values in $user-avatar-palette {
+        &.color-#{$color-name} {
+            color: map.get($color-values, 'fg');
+            background-color: map.get($color-values, 'bg');
+        }
+    }
+}
+
+.UserAvatarImage {
+    object-fit: cover;
+}

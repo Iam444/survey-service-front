@@ -1,0 +1,21 @@
+.PollResults {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    width: 540px;
+    height: fit-content;
+    min-height: 232px;
+    padding: 24px;
+    background-color: $color-black-light;
+    border: 1px solid $color-gray-darker;
+    border-radius: 12px;
+
+    & .PollSummaryOptionName {
+        line-height: 28px;
+    }
+}
+
+.PollResultsLoadingIndicator {
+    margin: auto;
+}

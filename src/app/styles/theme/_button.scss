@@ -1,0 +1,8 @@
+@use '@/shared/config/scss' as *;
+
+:root {
+    --color-themed-button-background: #{$color-black};
+    --color-themed-button-background-hovered: #{$color-black};
+    --color-themed-button-border: #{$color-gray-dark};
+    --color-themed-button-border-hovered: #{$color-gray};
+}

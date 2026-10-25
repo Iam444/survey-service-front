@@ -1,0 +1,16 @@
+.ExpandableListWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & .ExpandableListButton {
+        align-self: flex-start;
+        margin-left: -8px;
+    }
+}
+
+.ExpandableList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

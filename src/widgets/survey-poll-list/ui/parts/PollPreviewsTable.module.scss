@@ -1,0 +1,28 @@
+.PollPreviewsTableRow {
+    height: 60px;
+}
+
+.PollPreviewsTablePollOverviewLink {
+    display: flex;
+    flex: 1;
+    min-width: 1px;
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        content: '';
+    }
+}
+
+.PollPreviewsTableLoadingIndicator,
+.PollPreviewsTableEmptyResultBlock {
+    margin-inline: auto;
+}
+
+.PollPreviewsTableLoadingIndicator {
+    margin-top: 24px;
+}
+
+.PollPreviewsTableEmptyResultBlock {
+    margin-top: 48px;
+}

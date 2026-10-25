@@ -1,0 +1,30 @@
+.PollOption {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    padding: 18px;
+    line-height: 28px;
+    cursor: pointer;
+    user-select: none;
+    background-color: $color-black;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+    transition-property: box-shadow, border-color, background-color;
+
+    &:hover:not(.isSelected, .isDisabled) {
+        border-color: $color-gray-darker;
+        box-shadow: 0 0 0 1px $color-gray-darker;
+    }
+
+    &.isDisabled {
+        cursor: default;
+    }
+
+    &.isSelected {
+        background-color: $color-primary-800;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 1px $color-primary;
+    }
+}

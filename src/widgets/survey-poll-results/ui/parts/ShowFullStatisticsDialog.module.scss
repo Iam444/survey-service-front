@@ -1,0 +1,48 @@
+.OptionStatisticsList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-block: 6px;
+}
+
+.OptionStatistics {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & .OptionStatisticsOptionName,
+    & .OptionStatisticsVotesQuantity {
+        line-height: 28px;
+    }
+}
+
+.OptionStatisticsHeader {
+    padding: 18px 24px;
+    background-color: $color-black-lighter;
+    border-radius: 8px;
+}
+
+.UserVoteList {
+    display: flex;
+    flex-direction: column;
+}
+
+.UserVote {
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    & .UserVoteVoterName {
+        line-height: 40px;
+    }
+
+    &:hover {
+        background-color: $color-black-light;
+    }
+}
+
+.UserVoteUserPreview {
+    cursor: pointer;
+}

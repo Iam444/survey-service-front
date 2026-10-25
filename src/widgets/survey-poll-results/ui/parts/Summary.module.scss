@@ -1,0 +1,61 @@
+.Summary {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    width: 540px;
+    height: fit-content;
+    min-height: 200px;
+    padding: 24px;
+    background-color: $color-black-lighter;
+    border: 1px solid $color-gray-darker;
+    border-radius: 12px;
+
+    & .SummaryOptionName {
+        line-height: 28px;
+    }
+}
+
+.SummaryNotReadyIcon {
+    width: 90px;
+    height: 90px;
+    fill: $color-gray-light;
+}
+
+.SummaryLeadingOptionList,
+.SummaryViewerSelectionOptionList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+}
+
+.SummaryLeadingOption,
+.SummaryViewerSelectionOption {
+    display: flex;
+    align-items: center;
+}
+
+.SummaryLeadingOption,
+.SummaryViewerSelectionOption {
+    gap: 10px;
+}
+
+.SummaryLeadingOption {
+    fill: $color-yellow;
+}
+
+.SummaryViewerSelectionMark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: $color-primary;
+    border-radius: 4px;
+    fill: $color-white;
+
+    &.rounded {
+        border-radius: 50%;
+    }
+}

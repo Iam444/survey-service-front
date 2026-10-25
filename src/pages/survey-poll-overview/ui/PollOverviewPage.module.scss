@@ -1,0 +1,10 @@
+.PollOverviewPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    height: 100%;
+    padding: 48px 64px;
+    background-color: $color-black;
+}

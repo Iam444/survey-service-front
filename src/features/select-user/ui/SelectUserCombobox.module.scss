@@ -1,0 +1,19 @@
+.SelectUserComboboxInput {
+    padding-right: 28px;
+}
+
+.SelectUserComboboxLoadingIndicator {
+    margin-inline: 4px;
+}
+
+.SelectUserComboboxStatus,
+.SelectUserComboboxEmpty {
+    &.showMessage {
+        padding: 8px 16px;
+    }
+}
+
+.SelectUserComboboxUserName,
+.SelectUserComboboxUserEmail {
+    min-width: 50px;
+}

@@ -1,0 +1,27 @@
+.FilterSelectTriggerGroup {
+    position: relative;
+
+    .FilterSelectTrigger {
+        padding: 12px;
+
+        &.hasValue {
+            padding-right: 32px;
+            color: $color-primary-400;
+            background-color: $color-primary-700;
+        }
+    }
+}
+
+.FilterSelectClearButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 8px auto 4px;
+}
+
+.FilterSelectListItem {
+    min-width: 180px;
+    padding: 8px 12px;
+    border: unset;
+}

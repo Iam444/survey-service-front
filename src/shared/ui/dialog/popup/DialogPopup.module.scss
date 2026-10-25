@@ -1,0 +1,39 @@
+.DialogPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 320px;
+    max-height: calc(100% - 2 * 48px);
+    background-color: $color-black;
+    border: 1px solid $color-gray-darker;
+    border-radius: 12px;
+    translate: -50% -50%;
+    transition:
+        translate 0.1s ease-out,
+        scale 0.1s ease-out,
+        opacity 0.1s ease-out;
+
+    &.size-extraSmall {
+        max-width: 420px;
+    }
+
+    &.size-small {
+        max-width: 560px;
+    }
+
+    &.size-medium {
+        max-width: 960px;
+    }
+
+    &.size-large {
+        max-width: 1200px;
+    }
+
+    &.size-fullscreen {
+        width: 100%;
+        border-radius: 0;
+    }
+}

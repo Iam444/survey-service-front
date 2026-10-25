@@ -1,0 +1,20 @@
+$sizes: (
+    'extraSmall': 18px,
+    'small': 28px,
+    'medium': 36px,
+    'large': 48px,
+    'extraLarge': 60px,
+    'huge': 90px,
+);
+
+.Logo {
+    flex: none;
+    fill: $color-white;
+
+    @each $name, $value in $sizes {
+        &.size-#{$name} {
+            width: $value;
+            height: $value;
+        }
+    }
+}

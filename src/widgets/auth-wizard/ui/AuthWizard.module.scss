@@ -1,0 +1,26 @@
+.AuthWizard {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    padding: 48px 24px;
+}
+
+.AuthWizardLogo {
+    margin: 0 auto 12px;
+}
+
+.AuthWizardContent {
+    flex: auto;
+    width: 320px;
+    margin: 0 auto 90px;
+}
+
+.AuthWizardStep {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-block: 24px;
+    padding-inline: 24px;
+    background-color: $color-black-light;
+    border-radius: 12px;
+}

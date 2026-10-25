@@ -1,0 +1,30 @@
+.PollInfoPanel {
+    flex: 0 0 450px;
+    overflow: hidden auto;
+    background-color: $color-black;
+    border-left: 1px solid $color-gray-darker;
+}
+
+.PollInfoPanelGeneralData {
+    padding: 24px 24px 18px;
+    border-bottom: 1px solid $color-gray-darker;
+}
+
+.PollInfoPanelSettings {
+    padding: 24px;
+}
+
+.PollInfoPanelUserPreview {
+    padding: 8px;
+    margin-left: -8px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $color-white-transparent-6;
+    }
+}
+
+.PollInfoPanelUserList {
+    gap: 4px;
+}

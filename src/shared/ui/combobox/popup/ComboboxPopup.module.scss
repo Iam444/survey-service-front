@@ -1,0 +1,17 @@
+.ComboboxPopup {
+    overflow: hidden;
+    background-color: $color-black;
+    border: 1px solid $color-gray-darker;
+    border-radius: 6px;
+    box-shadow: 0 0 18px 0 rgb($color-black, 0.7);
+    transform-origin: var(--transform-origin);
+    transition:
+        opacity 0.1s,
+        transform 0.1s;
+
+    &[data-starting-style],
+    &[data-ending-style] {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+}

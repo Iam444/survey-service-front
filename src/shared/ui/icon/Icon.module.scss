@@ -1,0 +1,38 @@
+$sizes: (
+    'tiny': 8px,
+    'extraSmall': 10px,
+    'small': 12px,
+    'medium': 16px,
+    'large': 24px,
+);
+
+$rotation-values: (90, 180, 270);
+
+.Icon {
+    flex: none;
+
+    &.color-weak {
+        fill: $color-gray-light;
+    }
+
+    &.color-strong {
+        fill: $color-white;
+    }
+
+    &.color-primary {
+        fill: $color-primary;
+    }
+
+    @each $name, $value in $sizes {
+        &.size-#{$name} {
+            width: $value;
+            height: $value;
+        }
+    }
+
+    @each $value in $rotation-values {
+        &.rotation-#{$value} {
+            transform: rotate(#{$value}deg);
+        }
+    }
+}

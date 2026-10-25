@@ -1,0 +1,35 @@
+.Poll {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 540px;
+    min-height: 1px;
+    padding-block: 24px;
+    background-color: $color-black-light;
+    border: 1px solid $color-gray-darker;
+    border-radius: 12px;
+}
+
+.PollHeader,
+.PollContent {
+    padding-inline: 24px;
+}
+
+.PollContent {
+    min-height: 1px;
+    padding-block: 2px;
+    overflow: hidden auto;
+    scrollbar-color: $color-gray $color-black-lighter;
+    scrollbar-width: thin;
+}
+
+.PollOptionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.PollOptionSkeleton {
+    height: 66px;
+    border-radius: 8px;
+}

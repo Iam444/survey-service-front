@@ -1,0 +1,12 @@
+.PlainSelectOption {
+    &:hover {
+        & .PlainSelectOptionIcon {
+            fill: $color-white;
+        }
+    }
+}
+
+.PlainSelectOptionIcon {
+    align-self: flex-start;
+    margin-top: 5px;
+}

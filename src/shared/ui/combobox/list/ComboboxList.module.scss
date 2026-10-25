@@ -1,0 +1,6 @@
+.ComboboxList {
+    width: var(--anchor-width);
+    max-width: var(--available-width);
+    overflow: hidden auto;
+    overscroll-behavior: contain;
+}

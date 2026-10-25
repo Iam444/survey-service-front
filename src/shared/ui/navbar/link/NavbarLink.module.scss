@@ -1,0 +1,13 @@
+.NavbarLink {
+    padding-bottom: 10px;
+    font-weight: 500;
+    line-height: 22px;
+    color: $color-gray-light;
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    &:hover,
+    &.active {
+        color: $color-white;
+    }
+}

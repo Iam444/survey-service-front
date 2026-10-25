@@ -1,0 +1,15 @@
+.ExpandableSection {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 28px;
+    padding-inline: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $color-white-transparent-6;
+    }
+}

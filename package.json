@@ -1,7 +1,7 @@
 {
-    "name": "survey-service-frontend",
+    "name": "survey-service-front",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
     "description": "Frontend part of survey management service, a part of OTY web-application",
     "author": {

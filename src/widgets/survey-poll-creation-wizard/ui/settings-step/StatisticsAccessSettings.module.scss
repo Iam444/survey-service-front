@@ -1,0 +1,24 @@
+.StatisticsAccessSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.StatisticsAccessSettingsHoldersListLabel {
+    margin-top: 8px;
+}
+
+.StatisticsAccessSettingsHoldersList {
+    gap: 0;
+}
+
+.StatisticsAccessSettingsHoldersListItem {
+    padding: 8px;
+    margin-left: -8px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $color-white-transparent-6;
+    }
+}

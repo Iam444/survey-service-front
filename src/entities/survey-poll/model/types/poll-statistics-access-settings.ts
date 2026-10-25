@@ -1,0 +1,3 @@
+import type { IPollStatisticsSpecifiedAccessSettingsNestedDTO, IPollStatisticsNonSpecifiedAccessSettingsNestedDTO } from '@/shared/api/types';
+
+export type TPollStatisticsAccessSettings = IPollStatisticsSpecifiedAccessSettingsNestedDTO | IPollStatisticsNonSpecifiedAccessSettingsNestedDTO;

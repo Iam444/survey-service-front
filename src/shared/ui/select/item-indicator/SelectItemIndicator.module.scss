@@ -1,0 +1,8 @@
+.SelectItemIndicator {
+    visibility: hidden;
+    align-self: flex-start;
+
+    &.selected {
+        visibility: visible;
+    }
+}

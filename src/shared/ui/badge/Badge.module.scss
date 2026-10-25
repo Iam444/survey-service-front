@@ -1,0 +1,39 @@
+.Badge {
+    width: fit-content;
+    height: fit-content;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        'Helvetica Neue',
+        Helvetica,
+        Arial,
+        sans-serif;
+    color: $color-white;
+    text-wrap: nowrap;
+    cursor: default;
+    background-color: $color-primary;
+    border-radius: 4px;
+    fill: $color-white;
+
+    &.size-small {
+        padding-inline: 4px;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    &.size-medium {
+        padding-inline: 6px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &.size-large {
+        padding-inline: 10px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}

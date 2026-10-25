@@ -1,0 +1,87 @@
+@use 'sass:list';
+
+$title-sizes: (
+    'extraSmall': (
+        14,
+        20,
+    ),
+    'small': (
+        16,
+        20,
+    ),
+    'medium': (
+        20,
+        28,
+    ),
+    'large': (
+        24,
+        32,
+    ),
+    'extraLarge': (
+        32,
+        46,
+    ),
+    'huge': (
+        48,
+        56,
+    ),
+);
+
+$text-sizes: (
+    'small': (
+        12,
+        18,
+    ),
+    'medium': (
+        14,
+        22,
+    ),
+    'large': (
+        16,
+        24,
+    ),
+);
+
+.Skeleton {
+    width: 100%;
+    background-color: $color-white-transparent-6;
+    background-image: linear-gradient(-90deg, rgba($color-white, 0) 0%, $color-white-transparent-11 50%, rgb($color-white, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: -300px 0;
+    background-size: 300px 100%;
+    border-radius: 6px;
+    animation: shimmer 1.5s linear infinite;
+
+    @each $name, $values in $title-sizes {
+        &.fit-title-#{$name} {
+            height: list.nth($values, 1) * 1px;
+            margin-block: calc((list.nth($values, 2) - list.nth($values, 1)) / 2 * 1px);
+        }
+    }
+
+    @each $name, $values in $text-sizes {
+        &.fit-text-#{$name} {
+            height: list.nth($values, 1) * 1px;
+            margin-block: calc((list.nth($values, 2) - list.nth($values, 1)) / 2 * 1px);
+        }
+    }
+
+    &.fit-button-small {
+        height: 28px;
+    }
+
+    &.fit-textInput,
+    &.fit-button-medium {
+        height: 36px;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -300px 0;
+    }
+
+    100% {
+        background-position: 800px 0;
+    }
+}

@@ -1,0 +1,22 @@
+.TableHeaderColumn {
+    $min-width: var(--header-column-min-width, 80px);
+
+    display: flex;
+    flex: 1 1 $min-width;
+    align-items: center;
+    width: $min-width;
+    min-width: $min-width;
+    padding: 0 12px;
+    background-color: $color-black;
+
+    &.sticky {
+        position: sticky;
+        left: 0;
+        background-color: $color-black;
+        border-right: 1px solid $color-gray-darker;
+    }
+}
+
+.TableHeaderColumn:first-child {
+    padding-left: 24px;
+}

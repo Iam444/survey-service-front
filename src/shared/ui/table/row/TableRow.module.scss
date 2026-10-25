@@ -1,0 +1,13 @@
+.TableRow {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    min-width: max-content;
+    height: 40px;
+
+    &:hover {
+        background-color: $color-black-light;
+
+        --background-color-hovered: #{$color-black-light};
+    }
+}
