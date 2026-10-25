@@ -1,75 +1,72 @@
-# React + TypeScript + Vite
+# OTY Surveys [Frontend]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Фронтенд-часть сервиса управления опросами, являющийся частью веб-приложение OTY — мультисервесного приложения для менеджмента проектов.
 
-Currently, two official plugins are available:
+🔗 **[Ссылка на приложение](https://orgtool.ru)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Стек технологий
+* **Основа:** React v19 на сборке Vite, архитектура выстроена по FSD
+* **Роутинг:** React Router v7
+* **Стейт-менеджмент:** Tanstack Query v5
+* **Запросы:** Axios
+* **Компоненты:** Кастомные + Base UI для floating-компонентов
+* **Стилизация:** SCSS.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Ключевой функционал
+* **Авторизация и аутентификация:** Использование JWT для авторизации и аутентификации.
+* **Листинг опросов:** Сортировка опросов, фильтрация по формату и статусу, поиск по названию.
+* **Создание опросов:** Пошаговый сбор данных и настроек создаваемого опроса.
+* **Формат "выборов":** Особый тип опросника, где в качестве опций голосования выступают пользователи системы.
+* **Гибкие настройки:** Гибкие настройки доступа и видимости опроса, текущей статитистики голосования.
+* **Участие в опросе:** Функционал выбора опций и подтверждения выбора.
+* **Аналитика голосов:** Отображение статистики и результатов голосования по каждой из опций выбора.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Запуск на локальной машине
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### 1. Клонирование репозитория
+```bash
+git clone https://github.com/Iam444/survey-service-front.git
+cd survey-service-front
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### 2. Установка зависимостей
+```bash
+yarn install
 ```
+
+### 3. Настройка окружения
+Необходимо создать файл `.env.development` в корне проекта и добавить ключ домена бека для проксирования запросов:
+```env
+VITE_BACKEND_DOMAIN=localhost:3000
+```
+
+### 4. Запуск проекта
+```bash
+yarn dev
+```
+
+Проект будет доступен по адресу `http://localhost:5173`.
+
+---
+
+## Планы по доработке приложения
+### TODO:
+- [ ] Реализовать полноценный адаптив
+- [ ] Реализовать функционал смену темы оформления, "пересадить" стили на темозависимые токены 
+- [ ] Подключить OpenAPI: заменить ручное прописывание интерфейса на автогенерацию
+- [ ] Настроить aria-атрибуты и доступность
+- [ ] Доработать логику авторизации по истечении сессии
+- [ ] Добавить плавную отрисовка скелетонов с таймаутом, без "моргания"
+- [ ] Спроектировать и реализовать систему использования функционала без авторизации - в статусе "гостя"
+- [ ] Спроектировать и реализовать раздел профиля пользователя
+- [ ] Спроектировать и реализовать систему "отметок" (закладок)
+- [ ] Спроектировать и реализовать функционал управления опросными формами
+- [ ] Добавить функционал Reach Text Editor для описаний
+- [ ] Добавить функционал "залива" файлов (в частности - для аватара пользователя)
+- [ ] Провести рефактор интеграции компонентов Base UI
