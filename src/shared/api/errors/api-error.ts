@@ -1,12 +1,13 @@
 import type { TErrorCode } from './error-codes';
 
 export abstract class APIError extends Error {
-    protected constructor(
-        public readonly code: TErrorCode,
-        message: string,
-        public readonly description?: string,
-        error?: unknown,
-    ) {
+    public readonly code: TErrorCode;
+    public readonly description?: string | undefined;
+
+    protected constructor(code: TErrorCode, message: string, description?: string, error?: unknown) {
         super(message, { cause: error });
+
+        this.code = code;
+        this.description = description;
     }
 }
